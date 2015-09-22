@@ -1,14 +1,6 @@
----
-tags: rails, class methods, instance methods, validations, callbacks, private methods, aliases
-language: ruby
-resources: 4
----
-
-# Flatiron-bnb: Methods
+# Flatiron-BnB: Methods
 
 In the previous iteration, we built out our model associations and migrated our database. Now we're going to work on building useful methods (class and instance) for rendering data and our own validations. We're doing this to follow the principle that our controllers should be skinny, our models fat, so therefore our views have very little logic in them.
-
-<strong>Before anything</strong>, note that when you generate models, controllers, etc, be sure to include this option, so that it skips tests (which we already have): `--no-test-framework`
 
 ## Instructions
 
@@ -31,9 +23,6 @@ Callbacks are ways to attach methods/behavior to different points of a model's l
 
 Methods declared as callbacks should always be `private`, so they can't be called from code outside of the model.
 
-### Hint
-
-You will need to make a few new migrations to add some columns to some tables, and they should have default values.
 
 ## Super Bonus
 
