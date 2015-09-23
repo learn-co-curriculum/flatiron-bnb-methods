@@ -11,7 +11,8 @@ describe City do
 
   describe 'instance methods' do
     it 'knows about all the available listings given a date range' do
-      expect(City.first.city_openings('2014-05-01', '2014-05-05')).to include(@listing1)
+      expect(City.first.city_openings('2014-05-01', '2014-05-05')).to_not include(@listing1)
+      expect(City.first.city_openings('2014-05-01', '2014-05-05')).to include(@listing2)
     end 
   end
 
