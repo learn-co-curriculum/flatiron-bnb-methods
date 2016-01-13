@@ -5,12 +5,18 @@ class City < ActiveRecord::Base
   
   # Returns all of the available apartments in a city, given the date range
   def city_openings(start_date, end_date)
-    reservations.each_with_object([]) do |r, openings|
-      booked_dates = r.checkin..r.checkout
-      unless booked_dates === start_date || booked_dates === end_date
-        openings << r.listing
+    parsed_start = Date.parse(start_date)
+    parsed_end = Date.parse(end_date)
+    openings = []
+    listings.each do |listing|
+      blocked = listing.reservations.any? do |r|
+        parsed_start.between?(r.checkin, r.checkout) || parsed_end.between?(r.checkin, r.checkout)
+      end
+      unless blocked
+        openings << listing
       end
     end
+    return openings
   end
 
   # Returns city with highest ratio of reservations to listings
