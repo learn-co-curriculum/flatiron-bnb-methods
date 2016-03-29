@@ -1,16 +1,9 @@
-<<<<<<< HEAD
 # Flatiron-BnB: Methods
-
-In the previous iteration, we built out our model associations and migrated our database. Now we're going to work on building useful methods (class and instance) for rendering data and our own validations. We're doing this to follow the principle that our controllers should be skinny, our models fat, so therefore our views have very little logic in them.
-
-=======
-# Flatiron-bnb: Methods
 
 In the previous iteration, we built out our model associations and migrated our database. Now we're going to work on building useful methods (class and instance) for rendering data and our own validations. We're doing this to follow the principle that our controllers should be skinny, our models fat, so therefore our views have very little logic in them.
 
 **Before anything**, note that when you generate models, controllers, etc, be sure to include this option, so that it skips tests (which we already have): `--no-test-framework`
 
->>>>>>> master
 ## Instructions
 
 There are many methods here. Check out the specs and **remember to run your code in `rails c`** — that will help, I promise!
@@ -47,13 +40,10 @@ The same class/instance methods as your `City` object. Maybe there is a way they
 
 **Note:** Remember, if you're having trouble setting up your models' relationships, Google is your friend. There might be ways of designing associations that you haven't encountered yet but that will vastly simplify your code.
 
-<<<<<<< HEAD
-=======
 #### Methods
 
   * `#duration` gives the duration in days
   * `#total_price` returns the price using the duration and the price per day of the listing
->>>>>>> master
 
 ### Review
 
@@ -67,12 +57,7 @@ The same class/instance methods as your `City` object. Maybe there is a way they
 * [About Private Methods](http://stackoverflow.com/a/4293330/2890716)
 * [AR Validations](http://guides.rubyonrails.org/active_record_validations.html)
 * [Rails Callbacks](http://api.rubyonrails.org/classes/ActiveRecord/Callbacks.html)
-<<<<<<< HEAD
 * [Rails 4 Way: Validations](http://beta-library.herokuapp.com/books/the-rails-4-way#page=247)
 * [Rails 4 Way: Callbacks](http://beta-library.herokuapp.com/books/the-rails-4-way#page=273)
-=======
 
-<a href='https://learn.co/lessons/flatiron-bnb-methods' data-visibility='hidden'>View this lesson on Learn.co</a>
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/flatiron-bnb-methods'>Flatiron BnB Methods Lab</a> on Learn.co and start learning to code for free.</p>
->>>>>>> master
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/flatiron-bnb-methods'>Flatiron Bnb Methods Lab</a> on Learn.co and start learning to code for free.</p>

@@ -2,16 +2,16 @@ class City < ActiveRecord::Base
   has_many :neighborhoods
   has_many :listings, :through => :neighborhoods
   has_many :reservations, :through => :listings
-  
+
   # Returns all of the available apartments in a city, given the date range
   def city_openings(start_date, end_date)
     date_range = (Date.parse(start_date)..Date.parse(end_date))
     listings.collect do |listing|
       available = true
       listing.booked_dates.each do |date|
-          if date_range === date
-            available = false
-          end
+        if date_range === date
+          available = false
+        end
       end
       listing if available
     end
@@ -25,6 +25,7 @@ class City < ActiveRecord::Base
     else
       0
     end
+    return openings
   end
 
   # Returns city with highest ratio of reservations to listings
@@ -50,4 +51,3 @@ class City < ActiveRecord::Base
   end
 
 end
-
