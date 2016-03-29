@@ -15,8 +15,8 @@ ActiveRecord::Schema.define(version: 20140710181927) do
 
   create_table "cities", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "listings", force: :cascade do |t|
@@ -27,15 +27,15 @@ ActiveRecord::Schema.define(version: 20140710181927) do
     t.decimal  "price",           precision: 8, scale: 2
     t.integer  "neighborhood_id"
     t.integer  "host_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
   end
 
   create_table "neighborhoods", force: :cascade do |t|
     t.string   "name"
     t.integer  "city_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "reservations", force: :cascade do |t|
@@ -43,8 +43,8 @@ ActiveRecord::Schema.define(version: 20140710181927) do
     t.date     "checkout"
     t.integer  "listing_id"
     t.integer  "guest_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
     t.string   "status",     default: "pending"
   end
 
@@ -53,14 +53,14 @@ ActiveRecord::Schema.define(version: 20140710181927) do
     t.integer  "rating"
     t.integer  "guest_id"
     t.integer  "reservation_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.boolean  "host",       default: false
   end
 
