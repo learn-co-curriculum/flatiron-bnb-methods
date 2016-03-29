@@ -5,22 +5,18 @@ class Listing < ActiveRecord::Base
   has_many :reviews, :through => :reservations
   has_many :guests, :class_name => "User", :through => :reservations
 
-  validates_presence_of :address, :listing_type, :title, :description, :price, :neighborhood_id
-
-  validate :neighborhood_exists
+  validates :address, :listing_type, :title, :description, :price, :neighborhood, presence: true
 
   before_save :make_host
   before_destroy :host_status
 
   # Finds the average rating for a listing
   def average_review_rating
-    numerator = reviews.inject(0){|sum,r| sum += r.rating }
-    denominator = self.reviews.count 
-    if denominator > 0
-      numerator.to_f / denominator
-    else
-      "cannot divide by 0"
-    end
+    reviews.average(:rating)
+  end
+
+  def booked_dates
+    reservations.collect { |res| (res.checkin..res.checkout).to_a}.flatten.uniq
   end
 
   private
@@ -38,8 +34,5 @@ class Listing < ActiveRecord::Base
     end
   end
 
-  # Confirms neighborhood exists ebfore listing validated
-  def neighborhood_exists
-    errors.add(:neighborhood_id, "doesn't exist") unless Neighborhood.exists?(neighborhood_id)
-  end
+  
 end
