@@ -9,15 +9,12 @@ gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
   gem 'rack_session_access'
-  gem 'spring'
   gem "better_errors"
   gem "binding_of_caller"
   gem "capybara"
   gem "database_cleaner"
   gem "pry"
   gem "rspec-rails"
-  gem "selenium-webdriver"
-  gem "simplecov"
   gem "sprockets_better_errors"
   gem "sqlite3"
 end
