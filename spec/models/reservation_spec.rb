@@ -24,7 +24,7 @@ describe Reservation do
     )
   end
 
-  it 'has a checkin time' do
+  it 'has a check_in time' do
     expect(reservation.check_in).to eq(Date.parse('2014-04-25'))
   end
 
