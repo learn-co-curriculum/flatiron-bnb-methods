@@ -72,10 +72,9 @@ your code.
 
 ## Resources
 
-* [About Private Methods](http://stackoverflow.com/a/4293330/2890716)
-* [AR Validations](http://guides.rubyonrails.org/active_record_validations.html)
-* [Rails Callbacks](http://api.rubyonrails.org/classes/ActiveRecord/Callbacks.html)
 
-<a href='https://learn.co/lessons/flatiron-bnb-methods' data-visibility='hidden'>View this lesson on Learn.co</a>
+* [Rails 4 Way: Validations](http://beta-library.herokuapp.com/books/the-rails-4-way#page=247)
+* [Rails 4 Way: Callbacks](http://beta-library.herokuapp.com/books/the-rails-4-way#page=273)
 
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/flatiron-bnb-methods'>Flatiron BnB Methods Lab</a> on Learn.co and start learning to code for free.</p>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/flatiron-bnb-methods'>Flatiron Bnb Methods Lab</a> on Learn.co and start learning to code for free.</p>
