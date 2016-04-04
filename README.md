@@ -15,10 +15,10 @@ code in `rails c`** — that will help, I promise!
 
   * The `#city_openings` method should return all of the `Listing` objects that
   are available for the **entire span** that is inputted.
-  * The `.highest_ratio_res_to_listings` method should return the `City` that
+  * The `.highest_ratio_reservations_to_listings` method should return the `City` that
   is "most full". What that means is it has the highest amount of reservations
   per listing.
-  * The `.most_res` method should return the `City` with the most total number
+  * The `.most_reservations` method should return the `City` with the most total number
   of reservations, no matter if they are all on one listing or otherwise.
 
 ### Listing
@@ -46,7 +46,7 @@ they can share code?!?!?
 
 #### Validations
 
-  * Should have a `checkin` and a `checkout` method.
+  * Should have a `check_in` and a `check_out` method.
   * Make sure the guest and host aren't the same user.
   * Make sure any reservation that is made, doesn't conflict with others.
   * Make sure the checkout time is after the check in time.
@@ -72,9 +72,10 @@ your code.
 
 ## Resources
 
-
+* [About Private Methods](http://stackoverflow.com/a/4293330/2890716)
+* [AR Validations](http://guides.rubyonrails.org/active_record_validations.html)
+* [Rails Callbacks](http://api.rubyonrails.org/classes/ActiveRecord/Callbacks.html)
 * [Rails 4 Way: Validations](http://beta-library.herokuapp.com/books/the-rails-4-way#page=247)
 * [Rails 4 Way: Callbacks](http://beta-library.herokuapp.com/books/the-rails-4-way#page=273)
-
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/flatiron-bnb-methods'>Flatiron Bnb Methods Lab</a> on Learn.co and start learning to code for free.</p>
