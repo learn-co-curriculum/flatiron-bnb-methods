@@ -5,7 +5,8 @@ module Reservable
     listings.
       joins("left outer join reservations on listings.id = reservations.listing_id").
       where(
-        "reservations.check_in >= :end_date OR reservations.check_out <= :start_date OR (reservations.check_in is null AND reservations.check_out is null)",
+        "(reservations.check_in >= :start_date AND reservations.check_in >= :end_date) OR
+        (reservations.check_out <= :start_date AND reservations.check_out <= :end_date)",
         end_date: Date.parse(end_date),
         start_date: Date.parse(start_date)
       )

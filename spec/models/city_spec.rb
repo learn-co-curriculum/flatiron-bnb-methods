@@ -1,5 +1,4 @@
 describe City do
-<<<<<<< HEAD
   let(:nyc) { City.create(name: 'NYC') }
   let(:denver) { City.create(name: 'Denver') }
   let!(:nabe1) { Neighborhood.create(name: 'FiDi', city: nyc) }
@@ -13,23 +12,6 @@ describe City do
 
   it 'has many neighborhoods' do
     expect(nyc.neighborhoods).to eq([nabe1, nabe2, nabe3])
-=======
-  describe 'associations' do
-    it 'has a name' do
-      expect(City.first.name).to eq('NYC')
-    end
-
-    it 'has many neighborhoods' do
-      expect(City.first.neighborhoods).to eq([@nabe1, @nabe2, @nabe3])
-    end
-  end
-
-  describe 'instance methods' do
-    it 'knows about all the available listings given a date range' do
-      expect(City.first.city_openings('2014-05-01', '2014-05-05')).to_not include(@listing1)
-      expect(City.first.city_openings('2014-05-01', '2014-05-05')).to include(@listing2)
-    end
->>>>>>> origin/solution
   end
 
   describe "listings and reservations" do
@@ -123,7 +105,6 @@ describe City do
 
     describe ".highest_ratio_reservations_to_listings" do
       it 'knows the city with the highest ratio of reservations to listings' do
-<<<<<<< HEAD
         expect(
           City.highest_ratio_reservations_to_listings
         ).to eq(nyc)
@@ -133,33 +114,16 @@ describe City do
         expect(
           City.highest_ratio_reservations_to_listings
         ).to eq(nyc)
-=======
-        expect(City.highest_ratio_res_to_listings).to eq(City.find_by(:name => "NYC"))
-      end
-
-      it "doesn't hardcode the city with the highest ratio of reservations to listings" do
-        make_denver
-        expect(City.highest_ratio_res_to_listings).to eq(City.find_by(:name => "Denver"))
->>>>>>> origin/solution
       end
     end
 
     describe ".most_reservations" do
       it 'knows the city with the most reservations' do
-<<<<<<< HEAD
         expect(City.most_reservations).to eq(nyc)
       end
 
       it 'knows the city with the most reservations' do
         expect(City.most_reservations).to eq(nyc)
-=======
-        expect(City.most_res).to eq(City.find_by(:name => "NYC"))
-      end
-
-      it 'knows the city with the most reservations' do
-        make_denver
-        expect(City.most_res).to eq(City.find_by(:name => "Denver"))
->>>>>>> origin/solution
       end
     end
   end
