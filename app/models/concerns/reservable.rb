@@ -1,15 +1,8 @@
 module Reservable
-  extend ActiveSupport::Concern
+   extend ActiveSupport::Concern
 
   def openings(start_date, end_date)
-    listings.
-      joins("left outer join reservations on listings.id = reservations.listing_id").
-      where(
-        "(reservations.check_in >= :start_date AND reservations.check_in >= :end_date) OR
-        (reservations.check_out <= :start_date AND reservations.check_out <= :end_date)",
-        end_date: Date.parse(end_date),
-        start_date: Date.parse(start_date)
-      )
+    listings.merge(Listing.available(start_date, end_date))
   end
 
   def ratio_reservations_to_listings
@@ -19,7 +12,10 @@ module Reservable
   end
 
   class_methods do
+    # use of 'class_methods' is good, but I think is something that the curriculum 
+    # does not currently cover, so would need to be added.
     def highest_ratio_reservations_to_listings
+
       all.max do |a, b|
         a.ratio_reservations_to_listings <=> b.ratio_reservations_to_listings
       end

@@ -45,6 +45,7 @@ GEM
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
+    byebug (8.2.2)
     capybara (2.6.2)
       addressable
       mime-types (>= 1.16)
@@ -91,6 +92,9 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    pry-byebug (3.3.0)
+      byebug (~> 8.0)
+      pry (~> 0.10)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -185,7 +189,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   database_cleaner
   jquery-rails
-  pry
+  pry-byebug
   rack_session_access
   rails (= 4.2)
   rspec-collection_matchers

@@ -13,7 +13,7 @@ group :development, :test do
   gem "binding_of_caller"
   gem "capybara"
   gem "database_cleaner"
-  gem "pry"
+  gem "pry-byebug"
   gem "rspec-rails"
   gem "sprockets_better_errors"
   gem "sqlite3"
