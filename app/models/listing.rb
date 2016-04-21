@@ -21,8 +21,25 @@ class Listing < ActiveRecord::Base
 
   private
 
+  def self.available(start_date, end_date)
+    if start_date && end_date
+      joins(:reservations).
+        where.not(reservations: {check_in: start_date..end_date}) &
+      joins(:reservations).
+        where.not(reservations: {check_out: start_date..end_date})
+    else
+      []
+    end
+  end
+
+
+  # it feels to me like part of what makes this complicated is
+  # that we have column in the database called is_host, 
+  # but instead this could just be a method, and then rely on that..
+  # not sure if it's worth the effort though.
   def unset_host_as_host
-    if Listing.where(host_id: host.id).where.not(id: id).empty?
+    # remove .id
+    if Listing.where(host: host).where.not(id: id).empty?
       host.update(is_host: false)
     end
   end

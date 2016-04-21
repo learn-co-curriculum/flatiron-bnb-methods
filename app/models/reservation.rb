@@ -16,6 +16,7 @@ class Reservation < ActiveRecord::Base
   end
 
   private
+  
 
   def available
     Reservation.where(listing_id: listing.id).where.not(id: id).each do |r|

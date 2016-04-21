@@ -61,7 +61,7 @@ describe User do
 
   context 'as guest' do
     it 'has_many trips' do
-      expect(guest.trips)
+      expect(guest.trips)  
     end
 
     it 'has had many hosts' do

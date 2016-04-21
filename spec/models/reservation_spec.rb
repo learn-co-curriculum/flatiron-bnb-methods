@@ -63,6 +63,7 @@ describe Reservation do
   end
 
   it 'is invalid without a check_in' do
+    
     expect(
       Reservation.new(
       check_out: '2014-01-30',
@@ -114,6 +115,7 @@ describe Reservation do
 
   describe "conflicts" do
     before(:each) do
+      
       Reservation.create!(
         check_in: '2014-04-25',
         check_out: '2014-04-30',
@@ -124,6 +126,7 @@ describe Reservation do
     end
 
     it 'validates that a listing is available at check-in before making reservation' do
+
       expect(
         Reservation.new(
         check_in: '2014-04-24',
