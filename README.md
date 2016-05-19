@@ -1,6 +1,6 @@
 # Flatiron-bnb: Methods
 
-In the previous iteration, we built out our model associations and migrated our database. Now we're going to work on building useful methods (class and instance) for rendering data and our own validations. We're doing this to follow the principle that our controllers should be skinny, our models fat, so therefore our views have very little logic in them.
+In the previous iteration, we built out our model associations and migrated our database. Now we're going to work on building useful methods (class and instance) for rendering data and our own validations. We're doing this to follow the principle that our controllers should be skinny and our models fat. Therefore, our views will have very little logic in them.
 
 **Before anything**, note that when you generate models, controllers, etc, be sure to include this option, so that it skips tests (which we already have): `--no-test-framework`
 
@@ -10,7 +10,7 @@ There are many methods here. Check out the specs and **remember to run your code
 
 ### City
 
-  * The `#city_openings` method should return all of the `Listing` objects that are available for the **entire span** that is inputted. (**NOTE**: This isn't easy. Check the resources below and try out a few things in console until you're satisfied with your solution. Don't be afraid to google!)
+  * The `#city_openings` method should return all of the `Listing` objects that are available for the **entire span** that is inputted.
   * The `.highest_ratio_res_to_listings` method should return the `City` that is "most full". What that means is it has the highest amount of reservations per listing.
   * The `.most_res` method should return the `City` with the most total number of reservations, no matter if they are all on one listing or otherwise.
 
@@ -57,8 +57,9 @@ The same class/instance methods as your `City` object. Maybe there is a way they
 * [About Private Methods](http://stackoverflow.com/a/4293330/2890716)
 * [AR Validations](http://guides.rubyonrails.org/active_record_validations.html)
 * [Rails Callbacks](http://api.rubyonrails.org/classes/ActiveRecord/Callbacks.html)
-* [Date range overlaps](http://stackoverflow.com/questions/325933/determine-whether-two-date-ranges-overlap)
 
 <a href='https://learn.co/lessons/flatiron-bnb-methods' data-visibility='hidden'>View this lesson on Learn.co</a>
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/flatiron-bnb-methods'>Flatiron BnB Methods Lab</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/flatiron-bnb-methods'>Flatiron Bnb Methods Lab</a> on Learn.co and start learning to code for free.</p>
