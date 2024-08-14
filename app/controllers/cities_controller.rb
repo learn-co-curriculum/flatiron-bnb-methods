@@ -1,2 +1,2 @@
-class CitiesController < ApplicationController
+bundlclass CitiesController < ApplicationController
 end
